@@ -22,8 +22,19 @@ p strong {
     width: 1350px;
     height: 550px;
     display: -webkit-flex;
+    display: none;
+}
+
+.modalOn {
+    position: absolute;
+    border-radius: 5px;
+    list-style-type: none;
+    margin: auto auto;
+    width: 1350px;
+    height: 550px;
+    display: -webkit-flex;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color:rgba(0, 0, 0, 0.5);
 }
 
 .user-info h3 {

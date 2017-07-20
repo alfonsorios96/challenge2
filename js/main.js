@@ -5,9 +5,26 @@ if (!Array.prototype.last) {
         return this[this.length - 1];
     };
 }
-;
 
 var comments = [];
+
+function sda(event) {
+    var x = event.x;
+    var y = event.y;
+    if((x <= 134 || x >= 1104) || (y <= 52 || y >= 464)) {
+        hideModal();
+    }
+}
+
+function showModal() {
+    document.getElementById("modal1").classList.remove('modal');
+    document.getElementById("modal1").classList.add('modalOn');
+}
+
+function hideModal() {
+    document.getElementById("modal1").classList.remove('modalOn');
+    document.getElementById("modal1").classList.add('modal');
+}
 
 /**
  * @description This method saves in the array {comments} a search.
@@ -46,7 +63,7 @@ function addItem(listElement, valueElement) {
     var randomUser = getRandomPeople();
     console.log(randomUser);
     var avatar = '<img width="30" height="30" src="' + randomUser.profile_picture + '"> ';
-    var userName = '<strong>'+randomUser.name+'</strong> &#09;&#09;';
+    var userName = '<strong>' + randomUser.name + '</strong> &#09;&#09;';
     var newItem = document.createElement('p');
     var newContent = document.createTextNode('');
     newItem.appendChild(newContent);
