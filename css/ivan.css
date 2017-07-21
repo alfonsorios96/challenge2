@@ -5,20 +5,13 @@
 
 }
 
-img {
-    border: solid blue;
+.flex img {
     display: -webkit-flex;
     justify-content: center;
-    width: 280px;
-    height: 180px;
-
 }
 
 .flex {
     /* basic styling */
-
-    width: 300px;
-    height: 200px;
     display: inline-block;
     position: relative;
     transition: .3s;
