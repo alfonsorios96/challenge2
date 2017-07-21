@@ -1,0 +1,61 @@
+/*estructura flexbox*/
+.container {
+    display: -webkit-flex;
+    justify-content: center;
+
+}
+
+img {
+    border: solid blue;
+    display: -webkit-flex;
+    justify-content: center;
+    width: 280px;
+    height: 180px;
+
+}
+
+.flex {
+    /* basic styling */
+
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    position: relative;
+    transition: .3s;
+    margin: 4px;
+
+    /* flexbox setup */
+
+    margin: .5em;
+    padding: 1em;
+
+}
+
+/*animacion*/
+
+.flex img {
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+    border-radius: 4px;
+}
+
+.flex:hover img {
+    filter: blur(2px) brightness(60%);
+    box-shadow: 0 0 16px blue;
+}
+
+.flex :not(img) {
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    opacity: 0;
+    transition: .3s;
+}
+
+.flex:hover :not(img) {
+    opacity: 1;
+}
